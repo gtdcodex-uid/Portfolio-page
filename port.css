@@ -37,6 +37,7 @@ header{
     color: #9c9c9c;
 }
 
+
 .nav-bar nav  ul {
     list-style-type: none;
     display: flex;
@@ -45,9 +46,9 @@ header{
 .nav-bar li a{
     color:#9c9c9c;
     text-decoration: none;
-    font-size: 0.88rem;transition: 1s ease-in-out;
+    font-size: 0.72rem;transition: 1s ease-in-out;
     position: relative;
-    padding:10px 7px;
+    padding:5px 5px;
     border-radius: 999px;
 overflow: hidden;
 display: block;
@@ -68,12 +69,17 @@ transition: 1s ease-in-out;
     .nav-bar li a:hover{
 cursor: pointer;
 transform:translateY(-5px) ;
-font-size: 0.98rem;
+font-size: 0.8rem;
     }
     .nav-icon{
         display: flex;
         gap:2em;
         align-items: center;justify-content: center;
+    }
+    .toggle-btn{
+        width:8vw;
+        background-color: transparent;
+        border: 1px solid transparent;
     }
     #media{
         color:#9c9c9c;
@@ -525,7 +531,7 @@ padding-left: 1.5em;
      color: #9c9c9c;
 }
 
-.nav-bar nav  ul {
+.menu {
 display: none;
     }
     #media{
@@ -536,6 +542,34 @@ display: none;
     #bar{
         visibility: visible;
     }
+       .menu.show {
+    display: block;
+    position: absolute; 
+    top: 6vh; 
+    right: 0;
+    width: 40vw; 
+    height: auto; 
+    background-color: #1b1b1b; 
+    padding: 20px;
+    z-index: 100;
+}
+.menu.show ul {
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5em;
+}
+.menu.show ul li{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+header {
+    overflow: visible; 
+}
+ .menu.show :hover{
+    cursor: pointer;
+transform:translateY(0) ;
+font-size: 0.7rem;
+ }   
     .page1{
     width:100vw;
     height:59.2vh;
@@ -793,7 +827,7 @@ header{
     padding-right: 0;
 }
 
-.nav-bar nav  ul {
+.menu {
     list-style-type: none;
     display: flex;
     gap:1em;
@@ -819,7 +853,37 @@ header{
         visibility: visible;
         text-align: right;
         
-    }.page1{
+    }
+    .menu.show {
+    display: block;
+    position: absolute; 
+    top: 6vh; 
+    right: 0;
+    width: 40vw; 
+    height: auto; 
+    background-color: #1b1b1b; 
+    padding: 20px;
+    z-index: 100;
+}
+.menu.show ul {
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5em;
+}
+.menu.show ul li{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+header {
+    overflow: visible; 
+}
+ .menu.show :hover{
+    cursor: pointer;
+transform:translateY(0) ;
+font-size: 0.5rem;
+ }   
+    
+    .page1{
     width:100vw;
     height:66.2vh;
     background-color: #080808;
